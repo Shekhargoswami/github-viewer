@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: rgb(49, 43, 85);
+        }
+        .container {
+            justify-content: center;
+            margin: 0;
+            padding: 10px 100px;
+            border-radius: 20px;
+            align-items: center;
+            height: 100%;
+            display: flex;
+        }
+        .box {
+            text-align: center;
+            align-items: center;
+            padding: 10px 50px;
+            background-color: rgb(83, 134, 166);
+        }
+        button {
+            padding: 10px 110px;
+        }
+        span {
+            color: azure;
+        }
+        button:hover {
+            background-color: rgb(96, 81, 96);
+        }
+        input {
+            color: black;
+            padding: 10px 50px;
+            text-align: left;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h1>GITHUB PROFILE</h1>
+            <input id="User" type="text" placeholder="Userprofile">
+            <br><br>
+            <button onclick="profile()">Check it</button>
+            <br><br>
+            <a id="ans" href="#" target="_blank"></a>
+        </div>
+    </div>
+    <script>
+        function profile() {
+            let input = document.getElementById("User");
+            let ans = document.getElementById("ans");
+            ans.href = "https://github.com/" + input.value;
+            ans.innerHTML = "View Profile";
+        }
+    </script>
+</body>
+</html>
